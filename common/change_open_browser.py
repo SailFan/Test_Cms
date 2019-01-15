@@ -40,7 +40,7 @@ class Browers():
         return  screenShot
     def close(self):
         self.driver.close()
- r 
+ 
     def quit(self):
         self.driver.quit()
 if __name__ == '__main__':
