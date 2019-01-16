@@ -20,6 +20,7 @@ class Browers():
         else:
             raise UnSupportBrowserTypeError('仅支持%s!' % ', '.join(TYPES.keys()))
         self.driver = None
+    #最大化屏幕， 跳转指定地址
     def get(self, url, maxmize_window = True, implicitly_wait=30):
         self.driver = self.browser(EXECUTABLE_PATH[self._type])
         self.driver.get(url)
@@ -27,23 +28,24 @@ class Browers():
             self.driver.maximize_window()
         self.driver.implicitly_wait(implicitly_wait)
         return self
+    #截取屏幕
     def savaScreenShot(self,name="screenShot"):
         dayName = time.strftime("%Y%m%d", time.localtime(time.time()))
-        print(dayName)
         screenshotPath = REPORT_PATH+'\screenshot_%s' %dayName
-        print(screenshotPath+"-------------------------------------")
-        print(REPORT_PATH+"----------------------------------")
         if not os.path.exists(screenshotPath):
             os.makedirs(screenshotPath)
-        tmImage = time.strftime("%H%M%S", time.localtime(time.time()))
-        screenShot = self.driver.save_screenshot(screenshotPath.join(name).join(tmImage))
+        tmImage = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
+        imagePath = screenshotPath+"\\"+tmImage+".png"
+        print(imagePath)
+        screenShot = self.driver.save_screenshot(imagePath)
         return  screenShot
+    #关闭当前浏览器
     def close(self):
         self.driver.close()
- 
+    #退出当前浏览器
     def quit(self):
         self.driver.quit()
 if __name__ == '__main__':
     b = Browers("chrome").get("http://www.baidu.com")
-    b.savaScreenShot("lww")
+    b.savaScreenShot()
     b.quit()
