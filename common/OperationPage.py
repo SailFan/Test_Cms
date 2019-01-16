@@ -61,4 +61,5 @@ class OperationPage(Browers):
 
 
 if __name__ == '__main__':
-    pass
+    operationPage = OperationPage("firefox")
+    operationPage.get("https://www.baidu.com/")
