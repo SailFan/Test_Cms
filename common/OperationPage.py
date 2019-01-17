@@ -3,20 +3,21 @@ from selenium.webdriver.common.action_chains import ActionChains
 from  common.change_open_browser import Browers
 
 class OperationPage(Browers):
-    def __init__(self, page = None, browser_type = "chrome"):
-        if page:
-            self.driver = page.driver
-        else:
-            super().__init__(browser_type=browser_type)
+    # def __init__(self, page = None, browser_type = "chrome"):
+    #     if page:
+    #         self.driver = page.driver
+    #     else:
+    #         super().__init__(browser_type=browser_type)
     # 获取当前窗口句柄
+
+
+    def __init__(self, browser_type):
+        super().__init__(browser_type = browser_type)
+
     @property
     def current_windows(self):
         return self.driver.current_window_handle
 
-    #获取标题
-    @property
-    def get_title(self):
-        return self.driver.title
 
     #获取当前地址
     def get_current_title(self):
@@ -61,5 +62,5 @@ class OperationPage(Browers):
 
 
 if __name__ == '__main__':
-    operationPage = OperationPage("firefox")
+    operationPage = OperationPage(browser_type="chrome")
     operationPage.get("https://www.baidu.com/")
