@@ -33,6 +33,10 @@ class Browers():
         self.driver.implicitly_wait(implicitly_wait)
         return self
 
+    def send_key_input(self, str):
+        pass
+
+
     # 截取屏幕
     def savaScreenShot(self, name="screenShot"):
         dayName = time.strftime("%Y%m%d", time.localtime(time.time()))
@@ -92,16 +96,18 @@ class Browers():
 
     def switch_to_alert(self):
         return self.driver.switch_to.alert
+    # def clear(self):
 
-    def select_to(self):
+    # def select_to(self):
 
-        def close(self):
-            self.driver.close()
+    def close(self):
+        self.driver.close()
 
     # 退出当前浏览器
     def quit(self):
         self.driver.quit()
-
+    def find(self, id):
+        self.driver.find_element_by_id(id)
 
 if __name__ == '__main__':
     b = Browers("chrome").get("http://www.baidu.com")
