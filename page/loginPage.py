@@ -1,38 +1,60 @@
 from selenium.webdriver.common.by import By
 from common.change_open_browser import Browers
+from selenium.common.exceptions import NoSuchElementException
 import logging
+import time
 from selenium.webdriver.common.keys import Keys
 
 
 class LoginPage(Browers):
     userNameInput = (By.CSS_SELECTOR, "input[type='text']")
     passWordInput = (By.CSS_SELECTOR, "input[type='password']")
-    login_button = (By.CSS_SELECTOR, ".el-button el-button--primary")
-    reset_button = (By.CSS_SELECTOR, ".el-button el-button--default")
+    login_button = (By.CSS_SELECTOR, "button:first-child")
+    reset_button = (By.CSS_SELECTOR, "button:nth-child(2)")
     kw_input = (By.CSS_SELECTOR, "#kw")
     def inputUsername(self, username):
-        input_username = self.find_element(*self.userNameInput)
-        if input_username is not None:
+        try:
+            input_username = self.find_element(*self.userNameInput)
             input_username.clear()
             input_username.send_keys(username)
-        else:
-            logging.debug("没有找到用户名输入框")
+        except NoSuchElementException as msg:
+            logging.debug(u"查找元素异常%s"%msg)
+            logging.debug("llllllllllllllllllllllllll")
     def inputPassword(self, password):
-        self.find_element(*self.passWordInput).clear()
-        self.find_element(*self.passWordInput).send_keys(password)
+        try:
+            input_password =self.find_element(*self.passWordInput)
+            input_password.clear()
+            input_password.send_keys(password)
+        except NoSuchElementException as msg:
+            logging.debug(u"查找元素异常%s" % msg)
 
     def loginButton(self):
-        self.find_element(*self.login_button).click()
+        try:
+            login_bnutton = self.find_element(*self.login_button)
+            login_bnutton.click()
+        except NoSuchElementException as msg:
+            print(u"查找元素异常%s" % msg)
+
 
     def resetButton(self):
-        self.find_element(*self.reset_button).click()
+        try:
+            resetButton = self.find_element(*self.reset_button)
+            resetButton.click()
+        except NoSuchElementException as msg:
+            print(u"查找元素异常%s" % msg)
 
     def kw(self, kwValue):
-        self.find_element(*self.kw_input)
-
+        try:
+            s_input = self.find_element(*self.kw_input)
+            s_input.clear()
+            s_input.send_keys(kwValue)
+        except NoSuchElementException:
+            logging.debug("没有找到搜索框元素")
 if __name__ == '__main__':
-    pass
-    # loginPage = LoginPage("chrome");
-    # loginPage.get("http://test.admin.vocy.cn/#/login")
-    # loginPage.inputUsername("dfff")
-    # loginPage.quit()
+    loginPage = LoginPage("chrome");
+    loginPage.get("http://test.admin.vocy.cn/#/login")
+    loginPage.inputUsername("admin")
+    loginPage.inputPassword("111111")
+#    loginPage.loginButton()
+    loginPage.resetButton()
+    time.sleep(3)
