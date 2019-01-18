@@ -28,7 +28,7 @@ class LoginPage(Browers):
         self.find_element(*self.reset_button).click()
 
     def kw(self, kwValue):
-        self.find_element(self.kw_input)
+        self.find_element(*self.kw_input)
 
 if __name__ == '__main__':
     pass
