@@ -3,7 +3,6 @@ from common.change_open_browser import Browers
 from selenium.common.exceptions import NoSuchElementException
 import logging
 import time
-from selenium.webdriver.common.keys import Keys
 
 
 class LoginPage(Browers):
@@ -52,7 +51,7 @@ class LoginPage(Browers):
             logging.debug("没有找到搜索框元素")
 if __name__ == '__main__':
     loginPage = LoginPage("chrome");
-    loginPage.get("http://test.admin.vocy.cn/#/login")
+    loginPage.get("http://test.admin.xxx.cn/#/login")
     loginPage.inputUsername("admin")
     loginPage.inputPassword("111111")
 #    loginPage.loginButton()
