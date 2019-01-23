@@ -59,7 +59,7 @@ class Browers():
         return self.driver.title
 
     # 获取当前地址
-    def get_current_title(self):
+    def get_current_url(self):
         return self.driver.current_url
 
     def exectu(self, js, *args):
@@ -106,6 +106,12 @@ class Browers():
     # 退出当前浏览器
     def quit(self):
         self.driver.quit()
+
+    def refresh(self):
+        self.driver.refresh()
+
+    def delete_cookie(self):
+        self.driver.delete_all_cookies()
     def find(self, id):
         self.driver.find_element_by_id(id)
 

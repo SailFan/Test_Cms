@@ -3,7 +3,7 @@ from common.change_open_browser import Browers
 from selenium.common.exceptions import NoSuchElementException
 import logging
 import time
-
+logging.basicConfig(level = logging.DEBUG,format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 class LoginPage(Browers):
     userNameInput = (By.CSS_SELECTOR, "input[type='text']")
