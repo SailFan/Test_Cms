@@ -9,14 +9,14 @@ class TestLogin(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.browser = LoginPage("chrome")
-        cls.browser.get("http://test.admin.xxx.cn")
+        cls.browser.get("http://test.admin.vocy.cn")
 
     @classmethod
     def tearDownClass(cls):
         cls.browser.quit()
 
     def setUp(self):
-        self.browser.get("http://test.admin.xxx.cn")
+        self.browser.get("http://test.admin.vocy.cn")
 
     def tearDown(self):
         self.browser.delete_cookie()

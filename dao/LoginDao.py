@@ -1,7 +1,7 @@
 import sqlite3
 import unittest
-from ddt import ddt, data, unpack
-
+# from ddt import ddt, data, unpack
+from ddt import ddt,data, unpack
 
 def getUser():
     conn = sqlite3.connect("D:\pycode\Test_Cms\dao\CMS.db")
