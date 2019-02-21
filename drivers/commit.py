@@ -1,1 +1,1 @@
-没有用的文件
+import httptestrunner.three_point_six.HTMLTestRunner
