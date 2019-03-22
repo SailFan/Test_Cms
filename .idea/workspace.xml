@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9eb890b9-f19c-4dd3-a31f-113a0e0661b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/httptestrunner/sthtr/TestHTTPTtR.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/httptestrunner/sthtr/Test_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/httptestrunner/sthtr/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/st/HTML_TMPL.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/st/OutputRedirector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/st/STYLESHEET_TMPL.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/st/Template_mixin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/st/__init__.py" afterDir="false" />
-    </list>
+    <list default="true" id="9eb890b9-f19c-4dd3-a31f-113a0e0661b4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,8 +157,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/st/HTML_TMPL.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="118" column="10" lean-forward="true" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
+            <state relative-caret-position="93">
+              <caret line="102" column="6" lean-forward="true" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
               <folding>
                 <element signature="n#script#0;n#head#0;n#html#0;n#!!top" />
               </folding>
@@ -863,8 +854,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/st/HTML_TMPL.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="118" column="10" lean-forward="true" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
+        <state relative-caret-position="93">
+          <caret line="102" column="6" lean-forward="true" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
           <folding>
             <element signature="n#script#0;n#head#0;n#html#0;n#!!top" />
           </folding>
